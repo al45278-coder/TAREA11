@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Modificación de Alumnos</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9f7ef;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor {
+            width: 80%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0b8f2a;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+
+        fieldset {
+            border: 2px solid #0b8f2a;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        legend {
+            color: #0b8f2a;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .fila {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        label {
+            width: 230px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        input, select {
+            width: 55%;
+            padding: 7px;
+            border: 1px solid #999;
+            border-radius: 5px;
+        }
+
+        input[type="file"] {
+            border: none;
+        }
+
+        .botones {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #0b8f2a;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            margin: 5px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #07691f;
+        }
+
+        .cancelar {
+            background-color: #b22222;
+        }
+
+        .cancelar:hover {
+            background-color: #7d1515;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="contenedor">
+    <h1>MODIFICACIÓN DE ALUMNOS</h1>
+
+    <form>
+
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <div class="fila">
+                <label for="apellidoP">Apellido Paterno:</label>
+                <input type="text" id="apellidoP" name="apellidoP">
+            </div>
+
+            <div class="fila">
+                <label for="apellidoM">Apellido Materno:</label>
+                <input type="text" id="apellidoM" name="apellidoM">
+            </div>
+
+            <div class="fila">
+                <label for="nombre">Nombre del Alumno:</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+
+            <div class="fila">
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo">
+                    <option value="" selected disabled>Seleccione</option>
+                    <option>Masculino</option>
+                    <option>Femenino</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <div class="fila">
+                <label for="estadoCivil">Estado Civil:</label>
+                <select id="estadoCivil" name="estadoCivil">
+                    <option value="" selected disabled>Seleccione</option>
+                    <option>Soltero</option>
+                    <option>Casado</option>
+                    <option>Divorciado</option>
+                </select>
+            </div>
+
+            <div class="fila">
+                <label for="fechaNacimiento">F. Nac.:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+            </div>
+
+            <div class="fila">
+                <label for="curp">CURP:</label>
+                <input type="text" id="curp" name="curp">
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos escolares</legend>
+
+            <div class="fila">
+                <label for="idCarrera">ID. Carrera:</label>
+                <input type="number" id="idCarrera" name="idCarrera">
+            </div>
+
+            <div class="fila">
+                <label for="carrera">Carrera:</label>
+                <select id="carrera" name="carrera">
+                    <option value="" selected disabled>Seleccione</option>
+                    <option>Ingeniería en Software</option>
+                    <option>Contador Público</option>
+                    <option>Administración</option>
+                    <option>Mercadotecnia</option>
+                </select>
+            </div>
+
+            <div class="fila">
+                <label for="sistema">ID. Sistema Educativo:</label>
+                <input type="number" id="sistema" name="sistema">
+            </div>
+
+            <div class="fila">
+                <label for="tipoSistema">Sistema Educativo:</label>
+                <select id="tipoSistema" name="tipoSistema">
+                    <option value="" selected disabled>Seleccione</option>
+                    <option>Tradicional</option>
+                    <option>En Línea</option>
+                    <option>Mixto</option>
+                </select>
+            </div>
+
+            <div class="fila">
+                <label for="tetra">Tetra:</label>
+                <input type="number" id="tetra" name="tetra">
+            </div>
+
+            <div class="fila">
+                <label for="estatus">Status:</label>
+                <input type="number" id="estatus" name="estatus">
+            </div>
+
+            <div class="fila">
+                <label for="escuela">Escuela de Procedencia:</label>
+                <select id="escuela" name="escuela">
+                    <option value="" selected disabled>Seleccione</option>
+                    <option>Preparatoria</option>
+                    <option>CBTIS</option>
+                    <option>CONALEP</option>
+                    <option>Otra</option>
+                </select>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Contacto y dirección</legend>
+
+            <div class="fila">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
+
+            <div class="fila">
+                <label for="celular">Celular:</label>
+                <input type="tel" id="celular" name="celular">
+            </div>
+
+            <div class="fila">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="fila">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion">
+            </div>
+
+            <div class="fila">
+                <label for="colonia">Colonia:</label>
+                <input type="text" id="colonia" name="colonia">
+            </div>
+
+            <div class="fila">
+                <label for="poblacion">Población:</label>
+                <input type="text" id="poblacion" name="poblacion">
+            </div>
+
+            <div class="fila">
+                <label for="cp">Código Postal:</label>
+                <input type="number" id="cp" name="cp">
+            </div>
+
+            <div class="fila">
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado">
+                    <option value="" selected disabled>Seleccione</option>
+                    <option>Nuevo León</option>
+                    <option>Coahuila</option>
+                    <option>Tamaulipas</option>
+                    <option>Jalisco</option>
+                </select>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos de empresa</legend>
+
+            <div class="fila">
+                <label for="empresa">Empresa:</label>
+                <input type="text" id="empresa" name="empresa">
+            </div>
+
+            <div class="fila">
+                <label for="idEmpresa">ID. Empresa:</label>
+                <input type="number" id="idEmpresa" name="idEmpresa">
+            </div>
+
+            <div class="fila">
+                <label for="tipoEmpresa">Tipo de Empresa:</label>
+                <select id="tipoEmpresa" name="tipoEmpresa">
+                    <option value="" selected disabled>Seleccione</option>
+                    <option>Ninguna</option>
+                    <option>Privada</option>
+                    <option>Pública</option>
+                </select>
+            </div>
+
+            <div class="fila">
+                <label for="extEmpresa">Extensión:</label>
+                <input type="number" id="extEmpresa" name="extEmpresa">
+            </div>
+
+            <div class="fila">
+                <label for="extranjero">¿Es extranjero?</label>
+                <select id="extranjero" name="extranjero">
+                    <option value="" selected disabled>Seleccione</option>
+                    <option>Sí</option>
+                    <option>No</option>
+                </select>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Documentos</legend>
+
+            <div class="fila">
+                <label for="foto">Subir fotografía:</label>
+                <input type="file" id="foto" name="foto">
+            </div>
+
+            <div class="fila">
+                <label for="documento">Subir documento:</label>
+                <input type="file" id="documento" name="documento">
+            </div>
+
+        </fieldset>
+
+        <div class="botones">
+            <button type="submit">Guardar</button>
+            <button type="reset">Limpiar</button>
+            <button type="button" class="cancelar">Cancelar</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
